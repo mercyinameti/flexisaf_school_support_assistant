@@ -47,7 +47,8 @@ A proposed change takes effect only when `/proposals/{id}/approve` is called. Re
 - `dispatch.py`: validates a tool call, then runs the matching tool.
 - `ask_model.py`: sends a question to Gemini and runs the tool it chooses.
 - `main.py`: FastAPI endpoints and the audit log.
-- `audit_log.jsonl`: one line per request, with the time, method, path, and status.
+- `audit.py`: writes one line to `audit_log.jsonl` for each tool attempt by the assistant. Each line records the time, the tool name, where the call came from, and whether it succeeded, was invalid, or was unknown. It never records names, scores, or inputs, so the log can be kept safely.
+- `audit_log.jsonl`: one line per HTTP request (time, method, path, status) and one line per tool attempt by the assistant (time, tool, source, outcome). Names, scores, and inputs are not recorded.
 
 ## Documentation
 

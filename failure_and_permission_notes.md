@@ -18,3 +18,4 @@
 - **No login.** Anyone who can reach the server can approve or reject a proposal. This is a gap for a real school system. It needs authentication before use.
 - **No approver identity.** The audit log doesn't record who approved a change.
 - **Changes are not written to the data file.** Approved changes live in memory only, so `school_data.json` is never altered.
+- **Audit coverage:** Every HTTP request and every tool attempt by the assistant is logged. The log records the outcome, not the inputs or the reason for a 400 or 404.
