@@ -1,0 +1,18 @@
+{
+  "students": [
+    {"student_id": "S001", "name": "Ada Okafor", "level": "300"},
+    {"student_id": "S002", "name": "Emeka Obi", "level": "200"},
+    {"student_id": "S003", "name": "Ngozi Eze", "level": "300"}
+  ],
+  "courses": [
+    {"course_code": "CSC301", "title": "Operating Systems", "credit_units": 3},
+    {"course_code": "CSC305", "title": "Machine Learning", "credit_units": 3},
+    {"course_code": "GST101", "title": "Use of English", "credit_units": 2}
+  ],
+  "grades": [
+    {"student_id": "S001", "course_code": "CSC301", "score": 72},
+    {"student_id": "S001", "course_code": "CSC305", "score": 65},
+    {"student_id": "S002", "course_code": "GST101", "score": 58},
+    {"student_id": "S003", "course_code": "CSC301", "score": 48}
+  ]
+}
